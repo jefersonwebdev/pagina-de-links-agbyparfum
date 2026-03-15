@@ -1,0 +1,180 @@
+<?php
+/*
+Template Name: Página de Links Customizada
+*/
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGBYPARFUM - Links Oficiais</title>
+    <?php wp_head(); // Aqui o Rank Math e Site Kit entram ?>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://agbyparfum.com.br/wp-content/uploads/2025/11/cropped-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #b8860b;
+            --burgundy: #800020;
+            --dark: #0f0f0f;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white !important;
+            font-family: 'Montserrat', sans-serif;
+            background: radial-gradient(circle at center, #1a0006 0%, #0f0f0f 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif !important;
+        }
+
+        .logo-container {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo-img {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(184, 134, 11, 0.3));
+        }
+
+        .links-container {
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding-bottom: 3rem;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white !important;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .link-card:hover {
+            background: var(--burgundy);
+            border-color: var(--gold);
+            color: white !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(184, 134, 11, 0.2);
+        }
+
+        .link-card span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .social-icons svg {
+            fill: var(--gold);
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            transform: scale(1.2);
+            fill: white;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Delays para os links */
+        .link-card:nth-child(1) { animation-delay: 0.2s; }
+        .link-card:nth-child(2) { animation-delay: 0.4s; }
+        .link-card:nth-child(3) { animation-delay: 0.6s; }
+        .link-card:nth-child(4) { animation-delay: 0.8s; }
+        .link-card:nth-child(5) { animation-delay: 1.0s; }
+    </style>
+    
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://agbyparfum.com.br/wp-content/uploads/2025/11/logo.png" alt="AGBYPARFUM Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/150x150/800020/b8860b?text=AGBY'">
+    </div>
+
+    <h1 class="font-cinzel text-xl text-[#b8860b] mb-2 tracking-[4px]">AGBYPARFUM</h1>
+    <p class="text-xs uppercase tracking-[2px] mb-8 opacity-70">A Essência do Luxo Árabe</p>
+
+    <div class="links-container">
+        <a href="https://agbyparfum.com.br/" class="link-card" target="_blank">
+            <span>SITE OFICIAL</span>
+        </a>
+        
+        <a href="#" class="link-card" target="_blank">
+            <span>LANÇAMENTOS EXCLUSIVOS</span>
+        </a>
+
+        <a href="https://agbyparfum.com.br/" class="link-card" target="_blank">
+            <span>LOJA VIRTUAL</span>
+        </a>
+
+        <a href="https://wa.me/5513991486732?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20produtos.%20Vim%20pela%20p%C3%A1gina%20de%20links." class="link-card" target="_blank">
+            <span>WHATSAPP - ATENDIMENTO VIP</span>
+        </a>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/ag_byparfum/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!--
+        <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+        </a>
+        -->
+    </div>
+
+    <footer class="mt-auto py-6 text-[10px] opacity-40 uppercase tracking-[2px]">
+        &copy; 2026 AGBYPARFUM - Todos os direitos reservados
+    </footer>
+    <?php wp_footer(); // Aqui entram scripts de rastreamento extras ?>
+</body>
+</html>
